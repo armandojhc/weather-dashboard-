@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+</head>
+<body>
+    <nav class="navbar" style="background-color: black; height: 100px;">
+        <span class="navbar-text" style="color: white; width: 100%; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
+          <h2> Weather Dashboard</h2>
+        </span>
+      </nav>
+      <div class="row" style="height: 500px;">
+        <div class="container col" style="background-color: rgb(240, 232, 232); margin-left: 10px; font-family: 'Source Sans Pro', sans-serif;">
+            <h4>Search for a City:</h4>
+            <div class="input-group mb-3" style="width: 300px;">
+                <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                    </div>
+            </div>
+        </div>
+        <div class=" container col-8">
+            <div class="row">
+                <div class="container" id="searchedCityContainer" style="border: solid black; font-family: 'Source Sans Pro', sans-serif;">
+                    Searched for City Weather Container 
+                </div>
+            </div>
+            <div class="row">
+                <div class="container" style="border: solid black; font-family: 'Source Sans Pro', sans-serif;">
+                    <h4>5 Day Forecast</h4>
+                    <div class="container" id="forecastContainer">
+                        <div class="row">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Caracas</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Primary card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem; font-family: 'Source Sans Pro', sans-serif;">
+                                <div class="card-header">Miami</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Primary card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="madrid">Madrid</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Primary card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
+
+</html>
