@@ -19,29 +19,43 @@
         <div class="container col" style="background-color: rgb(240, 232, 232); margin-left: 10px; font-family: 'Source Sans Pro', sans-serif;">
             <h4>Search for a City:</h4>
             <div class="input-group mb-3" style="width: 300px;">
-                <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input type="text" value="Atlanta" id="city-text-box" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                        <button class="btn btn-primary" type="button" id="city-search-button">Button</button>
                     </div>
             </div>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush" id="cityList">
+                  
+                </ul>
+              </div>
         </div>
         <div class=" container col-8">
             <div class="row">
-                <div class="container" id="searchedCityContainer" style="border: solid black; font-family: 'Source Sans Pro', sans-serif;">
-                    Searched for City Weather Container 
+                <div class="container" id="searchedCityContainer" style="font-family: 'Source Sans Pro', sans-serif;">
+                    <div class="card" style="width: 18rem; height: 400px; width: 98%; margin-top: 10px; margin-bottom: 10px;">
+                        <div class="card-body">
+                          <h5 class="card-title" id="city-name"></h5>
+                          <p id="city-temperature">Card subtitle</p>
+                          <p id="city-humidity">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p id="city-windspeed">Card link</p>
+                          <p id="city-uv">Another link</p>
+                        </div>
+                      </div>
                 </div>
             </div>
             <div class="row">
-                <div class="container" style="border: solid black; font-family: 'Source Sans Pro', sans-serif;">
+                <div class="container" style=" font-family: 'Source Sans Pro', sans-serif;">
                     <h4>5 Day Forecast</h4>
                     <div class="container" id="forecastContainer">
                         <div class="row">
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Caracas</div>
+                                <div id="day1-Day" class="card-header"></div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Primary card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <p id="day1-temp" class="card-title">Primary card title</p>
+                                  <p id="day1-humidity" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
+                            
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem; font-family: 'Source Sans Pro', sans-serif;">
                                 <div class="card-header">Miami</div>
                                 <div class="card-body">
