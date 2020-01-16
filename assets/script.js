@@ -88,6 +88,11 @@ function todayWeather (weather) {
     
     $('#city-temperature').text(`Temperature: ${temp} F`);
 
+    $('#city-humidity').text(`Humidity: ${weather.main.humidity} %`);
+
+    var windSpeed = ((weather.wind.speed) * 2.237).toFixed(2);  
+    $('#city-windspeed').text(`Wind Speed: ${windSpeed} MPH`);
+
     //Now get the UV index for the city (weather.name)
     var queryUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + weather.name + '&appid=a53029242518ad3a567bbcab79de12cc';
 
@@ -97,6 +102,7 @@ function todayWeather (weather) {
     }).done( function (response) {
 
         console.log(response);
+
 
         //Get the UV index from the response object
         //Add the UV index like $('#city-temperature').text(`Temperature: ${temp} F`);
