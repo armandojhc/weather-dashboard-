@@ -149,7 +149,7 @@ function fiveDayForecast (fivedaycity) {
 
         console.log(response);
 
-        var firstDay = response.list[0].dt;
+        var firstDay = response.list[8].dt;
 
         // console.log(firstDay);
 
@@ -157,7 +157,7 @@ function fiveDayForecast (fivedaycity) {
 
         console.log(firstDaydate);
 
-        // $('#city-uv').text(`UV Index: ${response.value}`);
+        $('#day1-Date').text(firstDaydate);
         
     });
 
