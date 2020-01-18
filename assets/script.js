@@ -95,9 +95,13 @@ function todayWeather (weather) {
 
     var todayDate = weather.dt;
 
+    console.log(todayDate);
+
     // console.log(todayDate);
 
     var date = new Date(todayDate*1000);
+
+    console.log(date);
 
     // console.log(date);
 
@@ -116,8 +120,8 @@ function todayWeather (weather) {
     var cityLat = weather.coord.lat;
     var cityLon =weather.coord.lon;
 
-    console.log(cityLat);
-    console.log(cityLon);
+    // console.log(cityLat);
+    // console.log(cityLon);
     
     var queryUrl = 'https://api.openweathermap.org/data/2.5/uvi?appid=a53029242518ad3a567bbcab79de12cc&lat=' + cityLat + '&lon=' + cityLon;
 
@@ -126,7 +130,7 @@ function todayWeather (weather) {
         method: "GET"
     }).done( function (response) {
 
-        console.log(response);
+        // console.log(response);
 
         $('#city-uv').text(`UV Index: ${response.value}`);
         
@@ -145,7 +149,15 @@ function fiveDayForecast (fivedaycity) {
 
         console.log(response);
 
-        $('#city-uv').text(`UV Index: ${response.value}`);
+        var firstDay = response.list[0].dt;
+
+        // console.log(firstDay);
+
+        var firstDaydate = new Date(firstDay*1000);
+
+        console.log(firstDaydate);
+
+        // $('#city-uv').text(`UV Index: ${response.value}`);
         
     });
 
