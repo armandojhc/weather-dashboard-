@@ -61,6 +61,8 @@ function weatherSearch() {
     localStorage.setItem("search" , JSON.stringify(pastSearchCities));
 
     getWeather(searchCity);
+
+    fiveDayForecast(searchCity);
     
     //Get the text from the text box
     
@@ -129,5 +131,24 @@ function todayWeather (weather) {
         $('#city-uv').text(`UV Index: ${response.value}`);
         
     });
+}
+
+function fiveDayForecast (fivedaycity) {
+    console.log(fivedaycity);
+
+    var secondQueryURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + fivedaycity + '&appid=a53029242518ad3a567bbcab79de12cc';
+
+    $.ajax({
+        url: secondQueryURL,
+        method: "GET"
+    }).done( function (response) {
+
+        console.log(response);
+
+        $('#city-uv').text(`UV Index: ${response.value}`);
+        
+    });
+
+
 }
 
