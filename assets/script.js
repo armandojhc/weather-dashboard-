@@ -137,6 +137,8 @@ function todayWeather (weather) {
     });
 }
 
+// Not a DRY code in this section, I couldnt figure out how to skip correctly to get the dates and later conver them to nomal dates. 
+
 function fiveDayForecast (fivedaycity) {
     console.log(fivedaycity);
 
@@ -146,6 +148,9 @@ function fiveDayForecast (fivedaycity) {
         url: secondQueryURL,
         method: "GET"
     }).done( function (response) {
+
+
+        var URL = "http://openweathermap.org/img/w/";
 
         console.log(response);
 
@@ -158,7 +163,104 @@ function fiveDayForecast (fivedaycity) {
         console.log(firstDaydate);
 
         $('#day1-Date').text(firstDaydate);
+
+        var day1Icon = URL + response.list [8].weather[0].icon + ".png";
+
+        console.log(day1Icon);
+
+        $('#day1Icon').attr("src", day1Icon);
+
+        var temperature1 = Math.floor(((response.list[8].main.temp - 273.15) * 9/5) + 32);
+
+        console.log(temperature1);
+
+        $('#day1-temp').text(`Temp: ${temperature1} F`);
+
+        $('#day1-humidity').text(`Humidity: ${response.list[8].main.humidity} %`);
+
+
+        var secondDay = response.list[16].dt;
+
+        var secondDayDate = new Date (secondDay*1000);
+
+        $('#day2-Date').text(secondDayDate);
+
+        var day2Icon = URL + response.list [16].weather[0].icon + ".png";
+
+        $('#day2Icon').attr("src", day2Icon);
+
+        var temperature2 = Math.floor(((response.list[16].main.temp - 273.15) * 9/5) + 32);
+
+        console.log(temperature2);
+
+        $('#day2-temp').text(`Temp: ${temperature2} F`);
+
+        $('#day2-humidity').text(`Humidity: ${response.list[16].main.humidity} %`);
+
         
+        // 
+
+        var thirdDay = response.list[24].dt;
+
+        var thirdDayDate = new Date (thirdDay*1000);
+
+        $('#day3-Date').text(thirdDayDate);
+
+        var day3Icon = URL + response.list [24].weather[0].icon + ".png";
+
+        $('#day3Icon').attr("src", day3Icon);
+
+        var temperature3 = Math.floor(((response.list[24].main.temp - 273.15) * 9/5) + 32);
+
+        console.log(temperature3);
+
+        $('#day3-temp').text(`Temp: ${temperature3} F`);
+
+        $('#day3-humidity').text(`Humidity: ${response.list[24].main.humidity} %`);
+
+        // 
+
+        var fourthDay = response.list[32].dt;
+
+        var fourthDayDate = new Date (fourthDay*1000);
+
+        $('#day4-Date').text(fourthDayDate);
+
+        var day4Icon = URL + response.list [32].weather[0].icon + ".png";
+
+        $('#day4Icon').attr("src", day4Icon);
+
+        var temperature4 = Math.floor(((response.list[32].main.temp - 273.15) * 9/5) + 32);
+
+        console.log(temperature4);
+
+        $('#day4-temp').text(`Temp: ${temperature4} F`);
+
+        $('#day4-humidity').text(`Humidity: ${response.list[32].main.humidity} %`);
+
+
+        // 
+
+        var fifthDay = response.list[39].dt;
+
+        console.log(fifthDay);
+
+        var fifthDayDate = new Date (fifthDay*1000);
+
+        $('#day5-Date').text(fifthDayDate);
+
+        var day5Icon = URL + response.list [39].weather[0].icon + ".png";
+
+        $('#day5Icon').attr("src", day5Icon);
+
+        var temperature5 = Math.floor(((response.list[39].main.temp - 273.15) * 9/5) + 32);
+
+        console.log(temperature5);
+
+        $('#day5-temp').text(`Temp: ${temperature5} F`);
+
+        $('#day5-humidity').text(`Humidity: ${response.list[39].main.humidity} %`);
+
     });
 
 
