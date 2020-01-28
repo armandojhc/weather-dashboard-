@@ -8,12 +8,11 @@ When the user opens the page she would navigate to the left hand side. There is 
 
 At the bottom of the right hand side the user will be able to see a five day forecast that includes the date, time, temperature and humidity percentage.
 
-![Alt text](/assets/Screenshot_4.jpg)
-## How to use:
+![Alt text](/assets/Screenshot_1.jpg)## How to use:
 
 Step 1 - Open page and navigate to the left hand side. Type city.
 
-![Alt text](/assets/Screenshot_1.jpg)
+![Alt text](/assets/Screenshot_4.jpg)
 
 Step 2 - Click the search button.
 
